@@ -10,8 +10,25 @@ body {
 	padding: 0;
 }
 
+.expenseTableHeader{
+    padding: 7px 0;
+    background: lightgoldenrodyellow;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #046385;
+}
+
 #app-space{
 	min-height: calc(100vh - 50px);
+}
+
+#addAnother{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  background: orange;
+  border-radius: 35px;
 }
 
 /* make sidebar nav vertical */ 
