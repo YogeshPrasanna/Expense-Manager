@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "bootstrap-datepicker",
+        "scope": null,
+        "escapedName": "bootstrap-datepicker",
+        "name": "bootstrap-datepicker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\local\\Selfwork\\Expense-Manager"
+    ]
+  ],
+  "_from": "bootstrap-datepicker@latest",
+  "_id": "bootstrap-datepicker@1.7.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/bootstrap-datepicker",
+  "_nodeVersion": "6.11.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/bootstrap-datepicker-1.7.1.tgz_1499343335213_0.8218488255515695"
+  },
+  "_npmUser": {
+    "name": "acrobat",
+    "email": "jeroenthora@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "bootstrap-datepicker",
+    "scope": null,
+    "escapedName": "bootstrap-datepicker",
+    "name": "bootstrap-datepicker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz",
+  "_shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-datepicker",
+  "_where": "E:\\local\\Selfwork\\Expense-Manager",
+  "author": {
+    "name": "Andrew Rowls",
+    "email": "eternicode@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/uxsolutions/bootstrap-datepicker/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.7.1 <4.0.0"
+  },
+  "description": "A datepicker for Bootstrap",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-banner": "~0.6.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-string-replace": "^1.3.1",
+    "load-grunt-tasks": "^3.5.2",
+    "phantomjs-prebuilt": "~2.1.8",
+    "time-grunt": "^1.4.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf",
+    "tarball": "https://registry.npmjs.org/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz"
+  },
+  "files": [
+    "build",
+    "dist",
+    "js/**/*.js",
+    "less/*.less",
+    "LICENSE"
+  ],
+  "gitHead": "4c12834aae54782ca41d9409d6334193f200124d",
+  "homepage": "https://github.com/uxsolutions/bootstrap-datepicker",
+  "keywords": [
+    "datepicker",
+    "bootstrap"
+  ],
+  "license": "Apache-2.0",
+  "main": "./dist/js/bootstrap-datepicker.js",
+  "maintainers": [
+    {
+      "name": "acrobat",
+      "email": "jeroenthora@gmail.com"
+    }
+  ],
+  "name": "bootstrap-datepicker",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxsolutions/bootstrap-datepicker.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "1.7.1"
+}

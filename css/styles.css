@@ -1,28 +1,29 @@
 body {
   padding-top: 50px;
 }
+
 .content-area {
   padding: 20px 0px;
   height: 100%;
 }
 
-.sidebar-area{
-	padding: 0;
+.sidebar-area {
+  padding: 0;
 }
 
-.expenseTableHeader{
-    padding: 7px 0;
-    background: lightgoldenrodyellow;
-    font-size: 16px;
-    /* font-weight: bold; */
-    color: #046385;
+.expenseTableHeader {
+  padding: 7px 0;
+  background: lightgoldenrodyellow;
+  font-size: 16px;
+  /* font-weight: bold; */
+  color: #046385;
 }
 
-#app-space{
-	min-height: calc(100vh - 50px);
+#app-space {
+  min-height: calc(100vh - 50px);
 }
 
-#addAnother{
+#addAnother {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -31,7 +32,9 @@ body {
   border-radius: 35px;
 }
 
-/* make sidebar nav vertical */ 
+
+/* make sidebar nav vertical */
+
 @media (min-width: 768px) {
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
