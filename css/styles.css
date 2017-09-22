@@ -32,6 +32,22 @@ body {
   border-radius: 35px;
 }
 
+.btn-group .btn{
+  border: 1px solid #999;
+}
+
+#monthly-section-header{
+  border-bottom: 1px solid lightgrey;
+}
+
+#monthExpense{
+  margin-top: 15px;
+}
+
+/*Bootstrap overrides*/
+.btn-lg, .btn-group-lg > .btn{
+  padding: 10px 15px;
+}
 
 /* make sidebar nav vertical */
 

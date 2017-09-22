@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Monthly View</title>
+    <link rel="stylesheet" href="./../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./../css/styles.css">
+    <link rel="stylesheet" href="./../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Expense Manager</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <!-- <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div> -->
+                <!--/.nav-collapse -->
+            </div>
+    </nav>
+    <!-- Main Area -->
+    <div class="container-fluid" id="app-space">
+        <div class="row content-area">
+            <div class="col-sm-2 sidebar-area">
+                <div class="sidebar-nav">
+                    <div class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="visible-xs navbar-brand">Sidebar menu</span>
+                        </div>
+                        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Create an entry</a></li>
+                                <li class="active"><a href="#">Monthly View</a></li>
+                                <li><a href="#">Menu Item 3</a></li>
+                                <li><a href="#">Menu Item 4</a></li>
+                                <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <!-- --------------------------------- -->
+                <nav class="navbar navbar-light bg-light" id="monthly-section-header">
+                    <span class="h2" class="navbar-brand mb-0">2017</span>
+                </nav>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                    <button type="button" id="month-jan" class="btn btn-secondary">January</button>
+                    <button type="button" id="month-feb" class="btn btn-secondary">February</button>
+                    <button type="button" id="month-mar" class="btn btn-secondary">March</button>
+                    <button type="button" id="month-apr" class="btn btn-secondary">April</button>
+                    <button type="button" id="month-may" class="btn btn-secondary">May</button>
+                    <button type="button" id="month-jun" class="btn btn-secondary">June</button>
+                    <button type="button" id="month-jul" class="btn btn-secondary">July</button>
+                    <button type="button" id="month-aug" class="btn btn-secondary">August</button>
+                    <button type="button" id="month-sep" class="btn btn-secondary">September</button>
+                    <button type="button" id="month-oct" class="btn btn-secondary">October</button>
+                    <button type="button" id="month-nov" class="btn btn-secondary">November</button>
+                    <button type="button" id="month-dec" class="btn btn-secondary">December</button>
+                </div>
+                <!-- --------------------------------- -->
+                <div id="monthlyExpenseDisplaySection">
+                    <div id="monthName"></div>
+                    <div id="monthExpense">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Category</th>
+                                    <th>More info</th>
+                                    <th>comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th>
+                                    <td>12/09/2017</td>
+                                    <td>250</td>
+                                    <td>Entertainment</td>
+                                    <td>movie</td>
+                                    <td>spiderman returns</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/bootstrap.js"></script>
+    <script src="./../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
+    <script type="text/javascript" src="./../js/monthlyView.js"></script>
+</body>
+
+</html>
