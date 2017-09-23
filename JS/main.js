@@ -49,6 +49,19 @@ $(document).ready(function() {
       elem.push(category[i])
     });
 
-    console.log("row values  ",indivigualExpenses)
+    if(localStorage.expenses){
+      var temp = JSON.parse(localStorage.getItem("expenses"));
+      var finalArrToPush = temp;
+      if(indivigualExpenses.length >= 1){
+        indivigualExpenses.forEach(function(elem){
+          finalArrToPush.push(elem);
+        })
+        localStorage.setItem("expenses",JSON.stringify(finalArrToPush))
+      }
+    }else{
+      localStorage.setItem("expenses",JSON.stringify(indivigualExpenses))
+    }
+
+    console.log("row values  ",JSON.parse(localStorage.getItem("expenses")));
   })
 });

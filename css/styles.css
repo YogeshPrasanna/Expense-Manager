@@ -49,6 +49,18 @@ body {
   padding: 10px 15px;
 }
 
+.btn-group .btn{
+    width: 120px;
+    margin: 10px 15px !important;
+    border-radius: 5px !important;
+}
+
+.alert{
+  margin-top: 15px;
+  padding: 5px;
+  width: 75%;
+}
+
 /* make sidebar nav vertical */
 
 @media (min-width: 768px) {
