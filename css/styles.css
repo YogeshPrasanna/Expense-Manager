@@ -40,8 +40,16 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 
-#monthExpense{
+#monthExpense , #dayExpense{
   margin-top: 15px;
+}
+
+#dailyView-date{
+  width: 150px;
+}
+
+#search-day-expense{
+  margin-left: 10px;
 }
 
 /*Bootstrap overrides*/
