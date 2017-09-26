@@ -52,6 +52,16 @@ body {
   margin-left: 10px;
 }
 
+#dump-sample{
+  background-color: #34495e;
+  cursor: pointer !important;
+}
+
+#clear-old-data{
+  background-color: #7A7574;
+  cursor: pointer;
+}
+
 /*Bootstrap overrides*/
 .btn-lg, .btn-group-lg > .btn{
   padding: 10px 15px;

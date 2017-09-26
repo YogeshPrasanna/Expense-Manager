@@ -12,7 +12,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,14 +23,13 @@
                 <a class="navbar-brand" href="#">Expense Manager</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                <!-- <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div> -->
-                <!--/.nav-collapse -->
+                <ul class="nav navbar-nav" style="float:right">
+                    <li id="dump-sample"><a style="color: rgba(255, 165, 0, 0.83);">Dump sample data</a></li>
+                    <li id="clear-old-data"><a style="color: #fcf8e3;">Clear all data</a></li>
+                </ul>
             </div>
+            <!--/.nav-collapse -->
+        </div>
     </nav>
     <!-- Main Area -->
     <div class="container-fluid" id="app-space">
@@ -83,7 +82,7 @@
                 </div>
                 <!-- --------------------------------- -->
                 <div id="monthlyExpenseDisplaySection">
-                    <div id="monthName" ></div>
+                    <div id="monthName"></div>
                     <div id="monthExpense">
                         <table class="table table-sm" id="monthExpenseTable">
                             <thead>
