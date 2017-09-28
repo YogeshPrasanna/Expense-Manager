@@ -14,8 +14,52 @@ $(document).ready(function() {
     	var moneyFrom = $('#expenseRangeStart').val();
     	var moneyTo = $('#expenseRangeEnd').val();
     	var category = $('#dropdownMenuButton')[0].innerText;
+    	var allExpenses = JSON.parse(localStorage.getItem('expenses'));
+    	var filteredDates = []
 
-    	console.log(startDate , endDate, moneyFrom , moneyTo)
+    	// find out all the dates that fall between two dates
+	    var start = $("#dateRangeStart").datepicker("getDate");
+	    var end = $("#dateRangeEnd").datepicker("getDate");
+	    var currentDate = new Date(start);
+	    var between = [];
+
+	    while (currentDate <= end) {
+	         between.push(moment(new Date(currentDate)).format("MM/DD/YYYY"));
+	        //between.push(new Date(currentDate));
+	        currentDate.setDate(currentDate.getDate() + 1);
+	    }
+
+	    // step1 : filter by dates
+	    between.forEach(function(elem){
+				return allExpenses.filter(function(el){
+					return elem === el[0] ? filteredDates.push(el) : ''
+				})
+			})
+
+			// step2 : filter by expense amount
+
+			var checkDatesExist = filteredDates.length >= 1 ? filteredDates : allExpenses
+			var filteredByExpenses = checkDatesExist.filter(function(elem){
+				return Number(elem[1]) > moneyFrom && Number(elem[1]) < moneyTo
+			})
+
+			// step3 : filter by category
+
+			var filteredByCategory = (category === 'Category') ? (filteredByExpenses.length >= 1 ? filteredByExpenses : filteredDates ) : filteredByExpenses.filter(function(elem){
+				return elem[4] === category
+			})
+
+			$("#filteredExpenseTable tbody").text('')
+
+    		if(filteredByCategory.length >= 1){
+    			filteredByCategory.forEach(function(elem, i) {
+            $("#filteredExpenseTable").append('<tr><th scope="row">' + i + '</th><td>' + elem[0] + '</td><td>' + elem[1] + '</td><td>' + elem[4] + '</td><td>' + elem[2] + '</td><td>' + elem[3] + '</td></tr>');
+        	})
+    		}else{
+    			$("#filteredExpenseTable tbody").append('<div class="alert alert-warning"> sorry no records found</div>');
+    		}
+
+    	console.log(startDate , endDate, moneyFrom , moneyTo, category , filteredDates , filteredByExpenses, filteredByCategory)
     })
 
 });
