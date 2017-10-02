@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     		if(filteredByCategory.length >= 1){
     			filteredByCategory.forEach(function(elem, i) {
-            $("#filteredExpenseTable").append('<tr><th scope="row">' + i + '</th><td>' + elem[0] + '</td><td>' + elem[1] + '</td><td>' + elem[4] + '</td><td>' + elem[2] + '</td><td>' + elem[3] + '</td></tr>');
+            $("#filteredExpenseTable").append('<tr><th scope="row">' + i + '</th><td data-th="Date">' + elem[0] + '</td><td data-th="Amount">' + elem[1] + '</td><td data-th="Category">' + elem[4] + '</td><td data-th="More info">' + elem[2] + '</td><td data-th="Comments">' + elem[3] + '</td></tr>');
         	})
     		}else{
     			$("#filteredExpenseTable tbody").append('<div class="alert alert-warning"> sorry no records found</div>');

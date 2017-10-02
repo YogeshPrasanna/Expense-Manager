@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('#monthName').addClass('alert').addClass('alert-success').text("Here are your expenses for the month of " + month +" ...");
         $('#monthExpenseTable tbody').text('');
         monthRecords.forEach(function(elem, i) {
-            $("#monthExpenseTable").append('<tr><th scope="row">' + i + '</th><td>' + elem[0] + '</td><td>' + elem[1] + '</td><td>' + elem[4] + '</td><td>' + elem[2] + '</td><td>' + elem[3] + '</td></tr>');
+            $("#monthExpenseTable").append('<tr><th scope="row">' + i + '</th><td data-th="Date">' + elem[0] + '</td><td data-th="Amount">' + elem[1] + '</td><td data-th="Category">' + elem[4] + '</td><td data-th="More info">' + elem[2] + '</td><td data-th="comments">' + elem[3] + '</td></tr>');
         })
     }
 
