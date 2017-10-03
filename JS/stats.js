@@ -2,6 +2,12 @@ $(document).ready(function() {
 
     var allExpenses = JSON.parse(localStorage.getItem("expenses"));
 
+    function generateMonthlyRecords(monthNumber) {
+        return JSON.parse(localStorage.getItem("expenses")).filter(function(elem) {
+            return (new Date(elem[0]).getMonth()) === monthNumber
+        });
+    }
+
     function generateMonthlyTotalExpenses(monthNumber) {
         return allExpenses.filter(function(elem) {
             return (new Date(elem[0]).getMonth()) === monthNumber
@@ -20,6 +26,26 @@ $(document).ready(function() {
         }).reduce(function(prev, cur) {
             return prev + cur
         })
+    }
+
+    function generateMonthlyCategoryExpenses(category) {
+        return recordsForAllMonths.map(function(elem) {
+            return elem.filter(function(el) {
+                return el[4] === category
+            })
+        }).map(function(categoryRec) {
+            if (categoryRec.length > 1) {
+                return categoryRec.map(function(prices) {
+                    return prices[1]
+                }).reduce(function(prev, cur) { return Number(prev) + Number(cur) })
+            } else if (categoryRec.length == 0) {
+                return "0"
+            } else {
+                return categoryRec.map(function(prices) {
+                    return prices[1]
+                })
+            }
+        }).toString().split(',')
     }
 
     var januaryTotalExpense = generateMonthlyTotalExpenses(0);
@@ -47,6 +73,33 @@ $(document).ready(function() {
     var dataForExpensesVersusCategory = [clothingTotalExpense, automobileTotalExpense, entertainmentTotalExpense, foodTotalExpense, healthcareTotalExpense, vacationTotalExpense]
 
     //console.log(vacationTotalExpense)
+
+    var januaryRecords = generateMonthlyRecords(0);
+    var februaryRecords = generateMonthlyRecords(1);
+    var marchRecords = generateMonthlyRecords(2);
+    var aprilRecords = generateMonthlyRecords(3);
+    var mayRecords = generateMonthlyRecords(4);
+    var juneRecords = generateMonthlyRecords(5);
+    var julyRecords = generateMonthlyRecords(6);
+    var augustRecords = generateMonthlyRecords(7);
+    var septemberRecords = generateMonthlyRecords(8);
+    var octoberRecords = generateMonthlyRecords(9);
+    var novemberRecords = generateMonthlyRecords(10);
+    var decemberRecords = generateMonthlyRecords(11);
+
+    var recordsForAllMonths = [januaryRecords, februaryRecords, marchRecords, aprilRecords, mayRecords, juneRecords, julyRecords, augustRecords, septemberRecords, octoberRecords, novemberRecords, decemberRecords]
+
+
+    var yearlyClothingExpenses = generateMonthlyCategoryExpenses("Clothing ");
+    var yearlyAutomobileExpenses = generateMonthlyCategoryExpenses("Automobile ");
+    var yearlyEntertainmentExpenses = generateMonthlyCategoryExpenses("Entertainment ");
+    var yearlyVacationExpenses = generateMonthlyCategoryExpenses("Vacation ");
+    var yearlyFoodExpenses = generateMonthlyCategoryExpenses("Food ");
+    var yearlyHealthcareExpenses = generateMonthlyCategoryExpenses("Healthcare ");
+
+    var yearlyCategoryExpenses = [yearlyClothingExpenses, yearlyAutomobileExpenses, yearlyEntertainmentExpenses, yearlyVacationExpenses, yearlyFoodExpenses, yearlyHealthcareExpenses]
+
+    console.log(yearlyCategoryExpenses);
 
     var monthlyExpensesBarChart = document.getElementById("monthlyExpensesBarChart");
     var Chart1 = new Chart(monthlyExpensesBarChart, {
@@ -169,11 +222,62 @@ $(document).ready(function() {
         }
     };
 
-    window.onload = function() {
-        var ctx = document.getElementById("chart-area").getContext("2d");
-        window.myDoughnut = new Chart(ctx, config);
+    var allCatMonthlyconfig = {
+        type: 'line',
+        data: {
+            labels: ["jan", "feb", "mar", "apr", "may", "june", "july", "aug", "sep", "oct", "nov", "dec"],
+            datasets: [{
+                label: "Clothing",
+                fill: false,
+                backgroundColor: "#737495",
+                borderColor: "#737495",
+                data: yearlyCategoryExpenses[0]
+            }, {
+                label: "Automobile",
+                fill: false,
+                backgroundColor: "#F17D80",
+                borderColor: "#F17D80",
+                data: yearlyCategoryExpenses[1],
+            }, {
+                label: "Entertainment",
+                fill: false,
+                backgroundColor: "#68A8AD",
+                borderColor: "#68A8AD",
+                data: yearlyCategoryExpenses[2]
+            }, {
+                label: "Food",
+                fill: false,
+                backgroundColor: "#C4D4AF",
+                borderColor: "#C4D4AF",
+                data: yearlyCategoryExpenses[4],
+            }, {
+                label: "HealthCare",
+                fill: false,
+                backgroundColor: "#6C8672",
+                borderColor: "#6C8672",
+                data: yearlyCategoryExpenses[5]
+            }, {
+                label: "Vacation",
+                fill: false,
+                backgroundColor: "#775BA3",
+                borderColor: "#775BA3",
+                data: yearlyCategoryExpenses[3],
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: ''
+            },
+        }
     };
 
-
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        var allCatMonthly = document.getElementById("all-category-monthly-line-chart").getContext("2d");
+        window.myDoughnut = new Chart(ctx, config);
+        window.myLine = new Chart(allCatMonthly, allCatMonthlyconfig);
+    };
 
 })
