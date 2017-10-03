@@ -19,6 +19,15 @@ body {
   color: #046385;
 }
 
+.expenseSuccessSavedTableHeader {
+  padding: 7px 0;
+  background: lightgreen;
+  font-size: 16px;
+  /* font-weight: bold; */
+  color: #046385;
+}
+
+
 #app-space {
   min-height: calc(100vh - 50px);
 }
