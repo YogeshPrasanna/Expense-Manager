@@ -71,6 +71,21 @@ body {
   cursor: pointer;
 }
 
+#exportToCsv{
+  float: right;
+  display: none;
+}
+
+a.export,
+a.export:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
 .brace {
   width: auto;
   min-width: 35px;

@@ -1,14 +1,17 @@
 $(document).ready(function() {
+    var selectedMonth;
 
-    function generateMonthlyRecords(monthNumber){
+    function generateMonthlyRecords(monthNumber) {
         return JSON.parse(localStorage.getItem("expenses")).filter(function(elem) {
             return (new Date(elem[0]).getMonth()) === monthNumber
         });
     }
 
-    function printMonthlyRecords(month, monthRecords){
-        $('#monthName').addClass('alert').addClass('alert-success').text("Here are your expenses for the month of " + month +" ...");
+    function printMonthlyRecords(month, monthRecords) {
+        selectedMonth = month;
+        $('#monthName').addClass('alert').addClass('alert-success').text("Here are your expenses for the month of " + month + " ...");
         $('#monthExpenseTable tbody').text('');
+        $('#exportToCsv').css('display', 'block')
         monthRecords.forEach(function(elem, i) {
             $("#monthExpenseTable").append('<tr><th scope="row">' + i + '</th><td data-th="Date">' + elem[0] + '</td><td data-th="Amount">' + elem[1] + '</td><td data-th="Category">' + elem[4] + '</td><td data-th="More info">' + elem[2] + '</td><td data-th="comments">' + elem[3] + '</td></tr>');
         })
@@ -77,4 +80,71 @@ $(document).ready(function() {
     $('#month-dec').on('click', function() {
         printMonthlyRecords('December', decemberRecords)
     })
+
+
+    function exportTableToCSV($table, filename) {
+
+        var $rows = $table.find('tr:has(td)'),
+
+            // Temporary delimiter characters unlikely to be typed by keyboard
+            // This is to avoid accidentally splitting the actual contents
+            tmpColDelim = String.fromCharCode(11), // vertical tab character
+            tmpRowDelim = String.fromCharCode(0), // null character
+
+            // actual delimiter characters for CSV format
+            colDelim = '","',
+            rowDelim = '"\r\n"',
+
+            // Grab text from table into CSV formatted string
+            csv = '"' + $rows.map(function(i, row) {
+                var $row = $(row),
+                    $cols = $row.find('td');
+
+                return $cols.map(function(j, col) {
+                    var $col = $(col),
+                        text = $col.text();
+
+                    return text.replace(/"/g, '""'); // escape double quotes
+
+                }).get().join(tmpColDelim);
+
+            }).get().join(tmpRowDelim)
+            .split(tmpRowDelim).join(rowDelim)
+            .split(tmpColDelim).join(colDelim) + '"';
+
+        var download = function(content, fileName, mimeType) {
+            var a = document.createElement('a');
+            mimeType = mimeType || 'application/octet-stream';
+
+            if (navigator.msSaveBlob) { // IE10
+                navigator.msSaveBlob(new Blob([content], {
+                    type: mimeType
+                }), fileName);
+            } else if (URL && 'download' in a) { //html5 A[download]
+                a.href = URL.createObjectURL(new Blob([content], {
+                    type: mimeType
+                }));
+                a.setAttribute('download', fileName);
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            } else {
+                location.href = 'data:application/octet-stream,' + encodeURIComponent(content); // only this mime type is supported
+            }
+        }
+        download(csv, "'" + selectedMonth + '.csv', 'text/csv;encoding:utf-8');
+    }
+
+    // This must be a hyperlink
+    $("#exportToCsv").on('click', function(event) {
+
+        console.log("Runnig")
+        // CSV
+        var args = [$('#monthExpenseTable'), 'export.csv'];
+
+        exportTableToCSV.apply(this, args);
+
+        // If CSV, don't do event.preventDefault() or return false
+        // We actually need this to be a typical hyperlink
+    });
 })
