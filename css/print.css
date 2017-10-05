@@ -1,0 +1,11 @@
+.navbar  , .sidebar-area, .btngroups,  #exportToPdf, #exportToCsv{
+	display: none !important;
+}
+
+.btngroups{
+	visibility: : hidden;
+}
+
+#monthExpense{
+	display: block !important;
+}

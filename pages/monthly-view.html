@@ -6,6 +6,7 @@
     <title>Monthly View</title>
     <link rel="stylesheet" href="./../css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./../css/styles.css">
+    <link href="./../css/print.css" media="print" rel="stylesheet" />
     <link rel="stylesheet" href="./../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
 </head>
 
@@ -84,6 +85,7 @@
                 <div id="monthlyExpenseDisplaySection">
                     <div id="monthName"></div>
                     <div id="monthExpense">
+                        <button id="exportToPdf" type="button" class="btn btn-info">Print</button>
                         <button id="exportToCsv" type="button" class="btn btn-info">Export to csv</button>
                         <table class="table table-sm rwd-table" id="monthExpenseTable">
                             <thead>

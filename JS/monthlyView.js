@@ -12,6 +12,7 @@ $(document).ready(function() {
         $('#monthName').addClass('alert').addClass('alert-success').text("Here are your expenses for the month of " + month + " ...");
         $('#monthExpenseTable tbody').text('');
         $('#exportToCsv').css('display', 'block')
+        $('#exportToPdf').css('display', 'block')
         monthRecords.forEach(function(elem, i) {
             $("#monthExpenseTable").append('<tr><th scope="row">' + i + '</th><td data-th="Date">' + elem[0] + '</td><td data-th="Amount">' + elem[1] + '</td><td data-th="Category">' + elem[4] + '</td><td data-th="More info">' + elem[2] + '</td><td data-th="comments">' + elem[3] + '</td></tr>');
         })
@@ -81,7 +82,7 @@ $(document).ready(function() {
         printMonthlyRecords('December', decemberRecords)
     })
 
-
+    /* Export to csv */
     function exportTableToCSV($table, filename) {
 
         var $rows = $table.find('tr:has(td)'),
@@ -138,7 +139,6 @@ $(document).ready(function() {
     // This must be a hyperlink
     $("#exportToCsv").on('click', function(event) {
 
-        console.log("Runnig")
         // CSV
         var args = [$('#monthExpenseTable'), 'export.csv'];
 
@@ -147,4 +147,14 @@ $(document).ready(function() {
         // If CSV, don't do event.preventDefault() or return false
         // We actually need this to be a typical hyperlink
     });
+    /* Export to csv */
+
+    /* Export to PDF */
+        $('#exportToPdf').on('click',function(){
+            window.print();
+        })
+    /* Export to PDF */
+
+
+
 })

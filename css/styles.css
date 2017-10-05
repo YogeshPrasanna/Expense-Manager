@@ -1,180 +1,197 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 .content-area {
-  padding: 20px 0px;
-  height: 100%;
+    padding: 20px 0px;
+    height: 100%;
 }
 
 .sidebar-area {
-  padding: 0;
+    padding: 0;
 }
 
 .expenseTableHeader {
-  padding: 7px 0;
-  background: lightgoldenrodyellow;
-  font-size: 16px;
-  /* font-weight: bold; */
-  color: #046385;
+    padding: 7px 0;
+    background: lightgoldenrodyellow;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #046385;
 }
 
 .expenseSuccessSavedTableHeader {
-  padding: 7px 0;
-  background: lightgreen;
-  font-size: 16px;
-  /* font-weight: bold; */
-  color: #046385;
+    padding: 7px 0;
+    background: lightgreen;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #046385;
 }
 
 
 #app-space {
-  min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
 }
 
 #addAnother {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  cursor: pointer;
-  background: orange;
-  border-radius: 35px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    background: orange;
+    border-radius: 35px;
 }
 
-.btn-group .btn{
-  border: 1px solid #999;
+.btn-group .btn {
+    border: 1px solid #999;
 }
 
-#monthly-section-header{
-  border-bottom: 1px solid lightgrey;
+#monthly-section-header {
+    border-bottom: 1px solid lightgrey;
 }
 
-#monthExpense , #dayExpense{
-  margin-top: 15px;
+#monthExpense,
+#dayExpense {
+    margin-top: 15px;
 }
 
-#dailyView-date{
-  width: 150px;
+#dailyView-date {
+    width: 150px;
 }
 
-#search-day-expense{
-  margin-left: 10px;
+#search-day-expense {
+    margin-left: 10px;
 }
 
-#dump-sample{
-  background-color: #34495e;
-  cursor: pointer !important;
+#dump-sample {
+    background-color: #34495e;
+    cursor: pointer !important;
 }
 
-#clear-old-data{
-  background-color: #7A7574;
-  cursor: pointer;
+#clear-old-data {
+    background-color: #7A7574;
+    cursor: pointer;
 }
 
-#exportToCsv{
-  float: right;
-  display: none;
+#exportToCsv,
+#exportToPdf {
+    float: right;
+    margin: 0 0 15px 5px;
+    display: none;
 }
 
 a.export,
 a.export:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-  background-color: #ddd;
-  border: 1px solid #ccc;
-  padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 8px;
 }
 
 .brace {
-  width: auto;
-  min-width: 35px;
-  padding-bottom: 20px;
-  font-size: 2em;
-  line-height: 2em;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 15px 15px;
-  border: none;
-  background-color: transparent;
-  background-image: -webkit-radial-gradient(circle at 0 0, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px), -webkit-radial-gradient(circle at 35px 0, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px);
-  background-image: -webkit-radial-gradient(0 0 circle, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px), -webkit-radial-gradient(35px 0 circle, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px);
-  background-image: radial-gradient(circle at 0 0, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px), radial-gradient(circle at 35px 0, rgba(255,255,255,0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255,255,255,0) 20.5px);
-  background-size: 35px 20px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  text-transform: lowercase;
-  font-style: italic;
-  color: #fff;
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
-          filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+    width: auto;
+    min-width: 35px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    line-height: 2em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 15px 15px;
+    border: none;
+    background-color: transparent;
+    background-image: -webkit-radial-gradient(circle at 0 0, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px), -webkit-radial-gradient(circle at 35px 0, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px);
+    background-image: -webkit-radial-gradient(0 0 circle, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px), -webkit-radial-gradient(35px 0 circle, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px);
+    background-image: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px), radial-gradient(circle at 35px 0, rgba(255, 255, 255, 0) 14.5px, #fff 15.5px, #fff 19.5px, rgba(255, 255, 255, 0) 20.5px);
+    background-size: 35px 20px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #fff;
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
 }
+
 .brace:before {
-  width: 50%;
-  border-top: 5px solid #fff;
-  border-left: 1px solid transparent; /* play with this until you like the look of it */
-  border-top-left-radius: 20% 30px;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: -15px;
-  box-sizing: border-box;
-  margin-top: -5px;
+    width: 50%;
+    border-top: 5px solid #fff;
+    border-left: 1px solid transparent;
+    /* play with this until you like the look of it */
+    border-top-left-radius: 20% 30px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    box-sizing: border-box;
+    margin-top: -5px;
 }
+
 .brace:after {
-  width: 50%;
-  border-top: 5px solid #fff;
-  border-right: 1px solid transparent; /* play with this until you like the look of it */
-  border-top-right-radius: 20% 30px;
-  height: 100%;
-  content: "";
-  position: absolute;
-  top: 100%;
-  right: -15px;
-  box-sizing: border-box;
-  margin-top: -5px;
+    width: 50%;
+    border-top: 5px solid #fff;
+    border-right: 1px solid transparent;
+    /* play with this until you like the look of it */
+    border-top-right-radius: 20% 30px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: -15px;
+    box-sizing: border-box;
+    margin-top: -5px;
 }
+
+
 
 
 /*Bootstrap overrides*/
-.btn-lg, .btn-group-lg > .btn{
-  padding: 10px 15px;
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 10px 15px;
 }
 
-.btn-group .btn{
+.btn-group .btn {
     width: 120px;
     margin: 10px 15px !important;
     border-radius: 5px !important;
 }
 
-.alert{
-  margin-top: 15px;
-  padding: 5px;
-  width: 75%;
+.alert {
+    margin-top: 15px;
+    padding: 5px;
+    width: 75%;
+    position: relative;
+    top: 50px;
 }
+
+
 
 /* make sidebar nav vertical */
 
 @media (min-width: 768px) {
-  .sidebar-nav .navbar .navbar-collapse {
-    padding: 0;
-    max-height: none;
-  }
-  .sidebar-nav .navbar ul {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li {
-    float: none;
-    display: block;
-  }
-  .sidebar-nav .navbar li a {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
 }
+
+
 
 
 
@@ -182,84 +199,115 @@ a.export:visited {
 
 @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
 .rwd-table {
-  margin: 1em 0;
-  min-width: 300px;
+    margin: 1em 0;
+    min-width: 300px;
 }
+
 .rwd-table tr {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
+
 .rwd-table th {
-  display: none;
-}
-.rwd-table td {
-  display: block;
-}
-.rwd-table td:first-child {
-  padding-top: .5em;
-}
-.rwd-table td:last-child {
-  padding-bottom: .5em;
-}
-.rwd-table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 6.5em;
-  display: inline-block;
-}
-@media (min-width: 480px) {
-  .rwd-table td:before {
     display: none;
-  }
 }
-.rwd-table th, .rwd-table td {
-  text-align: left;
+
+.rwd-table td {
+    display: block;
 }
+
+.rwd-table td:first-child {
+    padding-top: .5em;
+}
+
+.rwd-table td:last-child {
+    padding-bottom: .5em;
+}
+
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+}
+
 @media (min-width: 480px) {
-  .rwd-table th, .rwd-table td {
-    display: table-cell;
-    padding: .25em .5em;
-  }
-  .rwd-table th:first-child, .rwd-table td:first-child {
-    padding-left: 0;
-  }
-  .rwd-table th:last-child, .rwd-table td:last-child {
-    padding-right: 0;
-  }
+    .rwd-table td:before {
+        display: none;
+    }
+}
+
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
+}
+
+@media (min-width: 480px) {
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
 }
 
 body {
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #444;
+    font-family: Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #444;
 }
 
 h1 {
-  font-weight: normal;
-  letter-spacing: -1px;
-  color: #34495E;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #34495E;
 }
 
 .rwd-table {
-  background: #34495E;
-  color: #fff;
-  border-radius: .4em;
-  overflow: hidden;
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
 }
+
 .rwd-table tr {
-  border-color: #46637f;
+    border-color: #46637f;
 }
-.rwd-table th, .rwd-table td {
-  margin: .5em 1em;
+
+.rwd-table th,
+.rwd-table td {
+    margin: .5em 1em;
 }
+
 @media (min-width: 480px) {
-  .rwd-table th, .rwd-table td {
-    padding: 1em !important;
-  }
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
 }
-.rwd-table th, .rwd-table td:before {
-  color: #dd5;
+
+.rwd-table th,
+.rwd-table td:before {
+    color: #dd5;
 }
+
+
+@media (max-width: 760px) {
+    #monthName {
+        top: 0 !important;
+    }
+    .alert{
+      width: 100%;
+    }
+}
+
 
 /* ---- ----- ----- RESOPONSIVE TABLES ---- ---- ---- */
