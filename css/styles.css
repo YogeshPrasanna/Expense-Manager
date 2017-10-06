@@ -27,6 +27,10 @@ body {
     color: #046385;
 }
 
+.sidebar-nav{
+    position: fixed;
+    width: inherit;
+}
 
 #app-space {
     min-height: calc(100vh - 50px);
