@@ -163,9 +163,16 @@ a.export:visited {
 .alert {
   margin-top: 15px;
   padding: 5px;
-  width: 75%;
   position: relative;
-  top: 50px;
+  top: 2px;
+  left: 10px;
+}
+
+.alert-warning{
+  width: 100%;
+}
+.alert-success{
+  width: 75%;
 }
 
 
