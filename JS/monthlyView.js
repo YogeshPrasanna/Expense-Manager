@@ -78,6 +78,9 @@ $(document).ready(function() {
     }; 
 
     function paintMonthlyChart(month){
+        // destroy old chart first inorder to stop fickerinf of chart with previous data
+        window.myDoughnut !== undefined ?  window.myDoughnut.destroy() : window.myDoughnut;
+        
         var ctx = document.getElementById("this-month-expenses-on-category").getContext("2d");
         donutChartData = [moneySpentOnACategoryPerMonth(month,"Automobile "),moneySpentOnACategoryPerMonth(month,"Clothing "),moneySpentOnACategoryPerMonth(month,"Entertainment "),moneySpentOnACategoryPerMonth(month,"Food "),moneySpentOnACategoryPerMonth(month,"Healthcare "),moneySpentOnACategoryPerMonth(month,"Vacation ") ]
         config.data.datasets[0].data = donutChartData
