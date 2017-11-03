@@ -1,0 +1,33 @@
+{
+  "name": "expense-manager",
+  "version": "1.0.0",
+  "description": "A simple traditional javascript app to track your expenses",
+  "main": "index.js",
+  "dependencies": {
+    "chart.js": "^2.7.0",
+    "bootstrap-datepicker": "^1.7.1",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "browser-sync start --server --files '*.html , ./css/*.css , ./js/*.js , ./node_modules/dist/*.css, ./node_modules/dist/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YogeshPrasanna/Expense-Manager.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "expense",
+    "tracker"
+  ],
+  "author": "Yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YogeshPrasanna/Expense-Manager/issues"
+  },
+  "homepage": "https://github.com/YogeshPrasanna/Expense-Manager#readme"
+}
