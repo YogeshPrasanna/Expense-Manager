@@ -240,6 +240,15 @@ $(document).ready(function() {
     //     window.myDoughnut = new Chart(ctx, config);
     //     //window.myLine = new Chart(allCatMonthly, allCatMonthlyconfig);
     // };
-
-
 })
+
+if(localStorage.visited){
+    localStorage.setItem("visited", false);
+  }else{
+    introJs()
+    .setOption("doneLabel", "Next page")
+    .start()
+    .oncomplete(function() {
+        window.location.href = "/pages/filter.html";
+    });
+  }

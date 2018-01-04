@@ -4,8 +4,9 @@
   "description": "A simple traditional javascript app to track your expenses",
   "main": "index.js",
   "dependencies": {
-    "chart.js": "^2.7.0",
     "bootstrap-datepicker": "^1.7.1",
+    "chart.js": "^2.7.0",
+    "intro.js": "^2.8.0-alpha.1",
     "moment": "^2.18.1"
   },
   "devDependencies": {},

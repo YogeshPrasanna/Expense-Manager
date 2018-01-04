@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "intro.js",
+        "scope": null,
+        "escapedName": "intro.js",
+        "name": "intro.js",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\local\\Selfwork\\Expense-Manager"
+    ]
+  ],
+  "_from": "intro.js@latest",
+  "_id": "intro.js@2.8.0-alpha.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/intro.js",
+  "_nodeVersion": "7.6.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/intro.js-2.8.0-alpha.1.tgz_1504109234340_0.8615063563920557"
+  },
+  "_npmUser": {
+    "name": "afshinmeh",
+    "email": "afshin.meh@gmail.com"
+  },
+  "_npmVersion": "4.1.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "intro.js",
+    "scope": null,
+    "escapedName": "intro.js",
+    "name": "intro.js",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/intro.js/-/intro.js-2.8.0-alpha.1.tgz",
+  "_shasum": "0838783af88f6d52254f86c118e60a5d4a39f1fe",
+  "_shrinkwrap": null,
+  "_spec": "intro.js",
+  "_where": "E:\\local\\Selfwork\\Expense-Manager",
+  "author": {
+    "name": "Afshin Mehrabani",
+    "email": "afshin.meh@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/usablica/intro.js/issues"
+  },
+  "dependencies": {},
+  "description": "Better introductions for websites and features with a step-by-step guide for your projects",
+  "devDependencies": {
+    "node-minify": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0838783af88f6d52254f86c118e60a5d4a39f1fe",
+    "tarball": "https://registry.npmjs.org/intro.js/-/intro.js-2.8.0-alpha.1.tgz"
+  },
+  "engine": [
+    "node >=0.1.90"
+  ],
+  "gitHead": "c2c99d16b6410224f2a8f9c57c664a2ef8b0e52f",
+  "homepage": "http://introjs.com",
+  "license": "AGPL-3.0",
+  "main": "intro.js",
+  "maintainers": [
+    {
+      "name": "ricardmo",
+      "email": "marco.ricard@gmail.com"
+    },
+    {
+      "name": "afshinmeh",
+      "email": "afshin.meh@gmail.com"
+    }
+  ],
+  "name": "intro.js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usablica/intro.js.git"
+  },
+  "scripts": {},
+  "spm": {
+    "main": "intro.js",
+    "output": [
+      "introjs.css"
+    ]
+  },
+  "version": "2.8.0-alpha.1"
+}

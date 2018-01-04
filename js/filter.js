@@ -63,3 +63,11 @@ $(document).ready(function() {
     })
 
 });
+
+
+if (localStorage.visited) {
+  localStorage.setItem("visited", false);
+} else {
+  localStorage.setItem("visited", true);
+  introJs().start();
+}
