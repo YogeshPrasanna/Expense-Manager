@@ -144,7 +144,10 @@ a.export:visited {
 }
 
 
-
+/* Overriding intro js background color */
+ .introjs-fixedTooltip{
+   background-color: rgba(255, 255, 255, .15) !important;
+ }
 
 
 /*Bootstrap overrides*/
