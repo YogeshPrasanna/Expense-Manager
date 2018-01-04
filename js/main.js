@@ -7,7 +7,7 @@ $(document).ready(function() {
         .setOption("doneLabel", "Next page")
         .start()
         .oncomplete(function() {
-          window.location.href = "Expense-Manager/pages/monthly-view.html";
+          window.location.href = "pages/monthly-view.html";
         });
     }
  
