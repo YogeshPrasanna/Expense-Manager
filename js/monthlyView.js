@@ -243,3 +243,15 @@ $(document).ready(function() {
 
 
 })
+
+
+if(localStorage.visited){
+    localStorage.setItem("visited", false);
+}else{
+    introJs()
+        .setOption("doneLabel", "Next page")
+        .start()
+        .oncomplete(function() {
+         window.location.href = "/pages/filter.html";
+    });
+}

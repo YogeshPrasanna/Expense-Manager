@@ -6,7 +6,8 @@
   <title>Expense Manager</title>
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
-  <link rel="stylesheet" href="./node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="./css/introjs.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-datepicker.css">
 </head>
 
 <body>
@@ -20,12 +21,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Expense Manager</a>
+        <a class="navbar-brand" href="#" data-step="1" data-intro="Welcome to expense manager !! start managing your expense">Expense Manager</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav" style="float:right">
-            <li id="dump-sample"><a style="color: rgba(255, 165, 0, 0.83);">Dump sample data</a></li>
-            <li id="clear-old-data"><a style="color: #fcf8e3;">Clear all data</a></li>
+            <li id="dump-sample"  data-step="4" data-intro="its all empty here. i know its your first time here !! so to see how the app actully looks with data , i've created sample data , click here to load the aplication with sample data" data-position='left'><a style="color: rgba(255, 165, 0, 0.83);">Dump sample data</a></li>
+            <li id="clear-old-data" data-step="5" data-intro=" Once you get a feel of how the app looks , clear the junk and start entering your expenses"><a style="color: #fcf8e3;">Clear all data</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->
@@ -59,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-10">
+      <div class="col-sm-10" data-step="3" data-intro="Once you start adding you expenses, All your expenses appear here ">
         <table class="table table-sm">
           <thead>
             <tr>
@@ -83,7 +84,7 @@
       </div>
       <!-- Save button -->
       <button type="button" id="save" class="btn btn-secondary pull-right" style="margin:15px">Save</button>
-      <svg id="addAnother" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;width=:70px;height:70px;" xml:space="preserve">
+      <svg id="addAnother" data-step="2" data-intro=" Click here to create an expense "  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;width=:70px;height:70px;" xml:space="preserve">
         <g>
           <path d="M50,86.6c20.2,0,36.6-16.4,36.6-36.6c0-20.2-16.4-36.6-36.6-36.6S13.4,29.8,13.4,50C13.4,70.2,29.8,86.6,50,86.6z M50,19.4   c16.9,0,30.6,13.7,30.6,30.6c0,16.9-13.7,30.6-30.6,30.6S19.4,66.9,19.4,50C19.4,33.1,33.1,19.4,50,19.4z" />
           <path d="M33.4,53h14v14c0,1.7,1.3,3,3,3s3-1.3,3-3V53h14c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3h-14V33c0-1.7-1.3-3-3-3s-3,1.3-3,3v14   h-14c-1.7,0-3,1.3-3,3C30.4,51.7,31.8,53,33.4,53z" />
@@ -91,10 +92,11 @@
       </svg>
     </div>
   </div>
-  <script src="./JS/jquery.min.js"></script>
-  <script src="./JS/bootstrap.js"></script>
-  <script src="./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-  <script type="text/javascript" src="./JS/main.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="./js/intro.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
