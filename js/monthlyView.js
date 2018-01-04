@@ -252,6 +252,6 @@ if(localStorage.visited){
         .setOption("doneLabel", "Next page")
         .start()
         .oncomplete(function() {
-         window.location.href = "Expense-Manager/pages/filter.html";
+         window.location.href = "filter.html";
     });
 }
